@@ -1,2 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 공사중 안내</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kakao: '#FEE500',
+                        kakaoHover: '#FADA00',
+                        kakaoDark: '#191919',
+                        brandPrimary: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        en: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'gradient-xy': {
+                            '0%, 100%': { 'background-size': '400% 400%', 'background-position': 'left top' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right bottom' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .glass-card-dark {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(254, 229, 0, 0.25) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen text-slate-800 flex flex-col justify-between selection:bg-kakao selection:text-kakaoDark overflow-x-hidden">
 
-홈페이지 업데이트중...
+    <!-- Ambient Floating Orbs -->
+    <div class="fixed top-12 left-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl pointer-events-none animate-float"></div>
+    <div class="fixed bottom-10 right-10 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl pointer-events-none animate-float" style="animation-delay: -3s;"></div>
+
+    <!-- Top Navigation Header -->
+    <header class="w-full max-w-5xl mx-auto px-6 pt-8 pb-4 flex justify-between items-center relative z-10">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-lg shadow-lg shadow-slate-900/10 font-en">
+                RE
+            </div>
+            <div class="flex flex-col">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en">Status Center</span>
+                <span class="text-sm font-bold text-slate-800">서비스 시스템 리뉴얼</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 bg-white/80 backdrop-blur-md border border-slate-200/80 px-4 py-2 rounded-full shadow-sm text-xs font-semibold text-slate-700">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span>시스템 작업 진행 중</span>
+        </div>
+    </header>
+
+    <!-- Main Content Grid Area -->
+    <main class="w-full max-w-5xl mx-auto px-6 py-6 flex-1 flex flex-col justify-center relative z-10">
+        
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+            <!-- Hero Card (Col 12 or Col 7) -->
+            <div class="md:col-span-7 glass-card rounded-3xl p-8 sm:p-10 shadow-xl shadow-slate-200/50 flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+                
+                <div>
+                    <!-- Tag Badge -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-50 border border-indigo-100 rounded-xl text-xs font-bold text-indigo-600 mb-6">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>NEW WEBSITE COMING SOON</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-4">
+                        더 완성도 높은 모습으로 <br class="hidden sm:inline"/>
+                        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">찾아뵙겠습니다</span>
+                    </h1>
+
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-lg font-normal">
+                        현재 고객님께 더 안전하고 편리한 환경을 제공해 드리기 위해 웹사이트 고도화 작업을 진행하고 있습니다. 빠른 시일 내에 오픈하도록 하겠습니다.
+                    </p>
+                </div>
+
+                <!-- Progress Bar Section -->
+                <div class="pt-6 border-t border-slate-200/60">
+                    <div class="flex justify-between items-center text-xs font-bold mb-2">
+                        <span class="text-slate-500 uppercase font-en tracking-wider">Renewal Progress</span>
+                        <span class="text-indigo-600 font-extrabold font-en text-sm">88%</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200/50">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full w-[88%] transition-all duration-1000 shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KakaoTalk Contact Card (Col 12 or Col 5) -->
+            <div class="md:col-span-5 bg-gradient-to-br from-kakao via-[#FDE000] to-amber-300 rounded-3xl p-8 shadow-xl shadow-amber-500/10 flex flex-col justify-between relative overflow-hidden group border border-yellow-300">
+                
+                <!-- Background Icon Pattern -->
+                <div class="absolute -right-6 -bottom-6 text-black/5 text-9xl font-black select-none pointer-events-none group-hover:scale-110 transition-transform duration-500">
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+
+                <div>
+                    <!-- Header inside Kakao Card -->
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 bg-kakaoDark rounded-2xl flex items-center justify-center text-kakao text-2xl shadow-md">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-black/10 backdrop-blur-sm rounded-full text-[11px] font-bold text-kakaoDark uppercase tracking-wider">
+                            실시간 문의
+                        </span>
+                    </div>
+
+                    <h2 class="text-xs font-bold text-slate-800/80 uppercase tracking-widest font-en mb-1">KakaoTalk Contact</h2>
+                    <p class="text-2xl font-extrabold text-kakaoDark tracking-tight mb-6">
+                        궁금하신 점이 있으신가요?
+                    </p>
+
+                    <!-- ID Display Box -->
+                    <div class="bg-slate-900/90 text-white rounded-2xl p-4 shadow-lg backdrop-blur-md border border-slate-800 mb-6">
+                        <div class="text-[11px] text-slate-400 font-medium mb-1">카카오톡 아이디</div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-black text-kakao tracking-wider font-en" id="kakaoId">v444</span>
+                            <span class="text-xs text-slate-400 bg-slate-800 px-2 py-1 rounded-lg">1:1 상담</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy Action Button -->
+                <div>
+                    <button id="copyBtn" onclick="copyKakaoId()" class="w-full py-4 px-6 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-2xl transition-all duration-200 flex items-center justify-center gap-2.5 shadow-lg active:scale-[0.98]">
+                        <i class="fa-regular fa-copy text-kakao" id="copyIcon"></i>
+                        <span id="copyBtnText">카카오톡 아이디 복사하기</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Sub Card 1: Key Improvements -->
+            <div class="md:col-span-8 glass-card rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en mb-4">Renewal Highlights</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    
+                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
+                        <div class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-bold">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="font-bold text-sm text-slate-800">속도 최적화</span>
+                        <span class="text-xs text-slate-500">기존 대비 2배 빠른 로딩 속도 제공</span>
+                    </div>
+
+                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
+                        <div class="w-8 h-8 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-bold">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <span class="font-bold text-sm text-slate-800">모바일 UX 개선</span>
+                        <span class="text-xs text-slate-500">모바일 기기에 더욱 친화적인 화면</span>
+                    </div>
+
+                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
+                        <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="font-bold text-sm text-slate-800">보안성 강화</span>
+                        <span class="text-xs text-slate-500">안전한 데이터 보호 및 암호화</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sub Card 2: Contact Info Pill -->
+            <div class="md:col-span-4 glass-card rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en mb-2">Customer Care</h3>
+                    <div class="text-lg font-bold text-slate-800 mb-2">빠르고 친절한 상담 서비스</div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                        공사 중이라도 문의사항이 있으시면 언제든 카카오톡 아이디 <b>v444</b> 등록 후 메세지를 남겨주세요.
+                    </p>
+                </div>
+                
+                <div class="flex items-center gap-3 pt-3 border-t border-slate-200/60 text-xs text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>평균 응답 시간 : <b>10분 이내</b></span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Floating Toast Alert Notification -->
+        <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 opacity-0 translate-y-4 transition-all duration-300 pointer-events-none z-50 bg-slate-900 text-white text-xs font-semibold px-6 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-800">
+            <div class="w-6 h-6 rounded-full bg-kakao text-kakaoDark flex items-center justify-center text-xs">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <span>카카오톡 아이디 <strong class="text-kakao font-bold">v444</strong>가 클립보드에 복사되었습니다.</span>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-400 relative z-10">
+        <p>© <span id="currentYear"></span> All rights reserved. 이용에 불편을 드려 죄송합니다.</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Set dynamic current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Copy KakaoTalk ID logic
+        function copyKakaoId() {
+            const kakaoId = "v444";
+            
+            const copyBtnText = document.getElementById('copyBtnText');
+            const copyIcon = document.getElementById('copyIcon');
+            const toast = document.getElementById('toast');
+
+            // Fallback & Modern Clipboard API Execution
+            function showSuccess() {
+                // Button UI State
+                copyBtnText.textContent = "복사되었습니다!";
+                copyIcon.className = "fa-solid fa-check text-emerald-400";
+
+                // Toast Feedback State
+                toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                toast.classList.add('opacity-100', 'translate-y-0');
+
+                // Reset after delay
+                setTimeout(() => {
+                    copyBtnText.textContent = "카카오톡 아이디 복사하기";
+                    copyIcon.className = "fa-regular fa-copy text-kakao";
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                    toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                }, 2500);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(kakaoId).then(showSuccess).catch(() => {
+                    fallbackCopy(kakaoId);
+                });
+            } else {
+                fallbackCopy(kakaoId);
+            }
+
+            function fallbackCopy(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showSuccess();
+                } catch (err) {
+                    console.error('Copy failed', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+    </script>
+</body>
+</html>
