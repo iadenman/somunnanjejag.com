@@ -1,307 +1,542 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홈페이지 공사중 안내</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO: Title & Description -->
+    <title>소문난서류제작 | 졸업증명서·성적증명서·대학교학위증·재학증명서 맞춤 서류 제작</title>
+    <meta name="description" content="졸업증명서, 성적증명서, 재학증명서, 대학교학위증, 졸업장, 학력증명서, 학위증명서 맞춤 제작 전문 소문난서류제작. 완벽한 디테일과 신속한 대응.">
+    <meta name="keywords" content="졸업증명서, 성적증명서, 재학증명서, 대학교학위증, 졸업장, 학력증명서, 학위증명서, 맞춤 서류 제작, 비식별 서류, 소문난서류제작">
+
+    <!-- Open Graph (OG) / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="소문난서류제작 | 졸업증명서·성적증명서·대학교학위증 맞춤 제작">
+    <meta property="og:description" content="완벽한 퀄리티와 디테일의 비식별 맞춤 서류 제작 전문.">
+    <meta property="og:site_name" content="소문난서류제작">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="/img/made.png">
+    
+    <!-- GEO & Local SEO -->
+    <meta name="geo.region" content="KR-11">
+    <meta name="geo.placename" content="Seoul, Mapo-gu">
+    <meta name="geo.position" content="37.5623;126.9242">
+    <meta name="ICBM" content="37.5623, 126.9242">
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cpolyline points='10 9 9 9 8 9'/%3E%3C/svg%3E">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        kakao: '#FEE500',
-                        kakaoHover: '#FADA00',
-                        kakaoDark: '#191919',
-                        brandPrimary: '#6366F1',
+                        brand: { 50: '#fffbebf', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 950: '#090d16' },
+                        kakao: '#FEE500', kakaoDark: '#191919',
                     },
-                    fontFamily: {
+                    fontFamily: { 
                         sans: ['Noto Sans KR', 'sans-serif'],
-                        en: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'gradient-xy': 'gradient-xy 15s ease infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        'gradient-xy': {
-                            '0%, 100%': { 'background-size': '400% 400%', 'background-position': 'left top' },
-                            '50%': { 'background-size': '200% 200%', 'background-position': 'right bottom' }
-                        }
+                        display: ['Plus Jakarta Sans', 'Noto Sans KR', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+
+    <!-- Custom CSS (Light Mode) -->
     <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.75);
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; }
+        
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
         }
-        .glass-card-dark {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .bg-mesh {
-            background-color: #f8fafc;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(254, 229, 0, 0.25) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+        
+        .bento-card:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 10px 20px -5px rgba(245, 158, 11, 0.15), 0 4px 6px -2px rgba(245, 158, 11, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 30px -5px rgba(245, 158, 11, 0.25);
         }
     </style>
+
+    <!-- JSON-LD Structured Data (FAQ & LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://somunnanjejag.com/",
+          "name": "소문난서류제작",
+          "description": "졸업증명서, 성적증명서, 대학교학위증, 재학증명서 등 맞춤 서류 제작 스튜디오"
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "소문난서류제작",
+          "image": "https://somunnanjejag.com/img/made.png",
+          "description": "졸업증명서, 성적증명서, 재학증명서, 대학교학위증, 졸업장, 학력증명서, 학위증명서 등 정교한 맞춤 서류 제작. 법적 효력 없음.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "마포구 연남동",
+            "addressLocality": "서울특별시",
+            "addressRegion": "Seoul",
+            "addressCountry": "KR"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "실제 서류 발급이나 대행을 하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "아니요. 본 서비스의 결과물은 맞춤 연출을 위한 가공물입니다. 실제 증빙을 목적으로 사용할 수 없으며, 실제 행정 제출용 서류의 제작이나 발급을 절대 대행하지 않습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "오용 방지 장치는 무엇이 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "실제 공식 서류와 혼동될 가능성을 원천 차단하기 위해 무효(VOID) 또는 샘플 표시를 유지하며, 민감 정보는 가공된 텍스트로 비식별화하여 제작하는 것을 철칙으로 합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
-<body class="bg-mesh min-h-screen text-slate-800 flex flex-col justify-between selection:bg-kakao selection:text-kakaoDark overflow-x-hidden">
+<body class="text-slate-700 antialiased selection:bg-amber-500 selection:text-white">
 
-    <!-- Ambient Floating Orbs -->
-    <div class="fixed top-12 left-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl pointer-events-none animate-float"></div>
-    <div class="fixed bottom-10 right-10 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl pointer-events-none animate-float" style="animation-delay: -3s;"></div>
+    <!-- Header (Light Mode) -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-slate-900 block leading-none font-display">소문난서류제작</span>
+                    <span class="text-[10px] text-amber-600 font-bold uppercase tracking-widest">Premium Service</span>
+                </div>
+            </a>
 
-    <!-- Top Navigation Header -->
-    <header class="w-full max-w-5xl mx-auto px-6 pt-8 pb-4 flex justify-between items-center relative z-10">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-lg shadow-lg shadow-slate-900/10 font-en">
-                RE
-            </div>
-            <div class="flex flex-col">
-                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en">Status Center</span>
-                <span class="text-sm font-bold text-slate-800">서비스 시스템 리뉴얼</span>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-amber-600 transition-colors">전체 서비스</a>
+                <a href="#scope" class="hover:text-amber-600 transition-colors">제작 범위</a>
+                <a href="#promise" class="hover:text-amber-600 transition-colors">소문난의 약속</a>
+                <a href="#faq" class="hover:text-amber-600 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Kakao ID Action Box (Separated ID and Copy Button) -->
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:flex items-center bg-white border border-slate-200 p-1 pl-3.5 rounded-full shadow-sm hover:border-amber-300 transition-all group">
+                    <div class="flex items-center gap-2 mr-3">
+                        <i class="fa-solid fa-comment text-amber-500 text-sm"></i>
+                        <span class="text-xs text-slate-500 font-medium">카톡 문의: <strong class="text-slate-900 font-bold">v444</strong></span>
+                    </div>
+                    <button onclick="copyKakaoId()" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors flex items-center gap-1.5 active:scale-95">
+                        <i class="fa-regular fa-copy text-[11px]"></i> 복사하기
+                    </button>
+                </div>
+                <button id="mobileMenuBtn" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMobileMenu()" class="md:hidden text-slate-600 hover:text-slate-900 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
             </div>
         </div>
 
-        <div class="flex items-center gap-2 bg-white/80 backdrop-blur-md border border-slate-200/80 px-4 py-2 rounded-full shadow-sm text-xs font-semibold text-slate-700">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span>시스템 작업 진행 중</span>
+        <!-- Mobile Drawer Menu (Light) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/98 border-b border-slate-200 px-6 py-6 space-y-4 shadow-2xl absolute w-full left-0 top-20 backdrop-blur-2xl">
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">전체 서비스</a>
+            <a href="#scope" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">제작 범위</a>
+            <a href="#promise" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">소문난의 약속</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">FAQ</a>
+            <div class="pt-6 border-t border-slate-100 mt-2">
+                <div class="w-full p-2 pl-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-comment text-amber-500 text-lg"></i>
+                        <span class="text-sm font-semibold text-slate-600">ID : <strong class="text-slate-900 font-bold">v444</strong></span>
+                    </div>
+                    <button onclick="copyKakaoId()" class="bg-amber-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 active:scale-95 transition-transform">
+                        <i class="fa-regular fa-copy"></i> 복사하기
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Grid Area -->
-    <main class="w-full max-w-5xl mx-auto px-6 py-6 flex-1 flex flex-col justify-center relative z-10">
-        
-        <!-- Bento Grid Layout -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-
-            <!-- Hero Card (Col 12 or Col 7) -->
-            <div class="md:col-span-7 glass-card rounded-3xl p-8 sm:p-10 shadow-xl shadow-slate-200/50 flex flex-col justify-between relative overflow-hidden group">
-                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
-                
-                <div>
-                    <!-- Tag Badge -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-50 border border-indigo-100 rounded-xl text-xs font-bold text-indigo-600 mb-6">
-                        <i class="fa-solid fa-sparkles"></i>
-                        <span>NEW WEBSITE COMING SOON</span>
-                    </div>
-
-                    <!-- Main Headline -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-4">
-                        더 완성도 높은 모습으로 <br class="hidden sm:inline"/>
-                        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">찾아뵙겠습니다</span>
-                    </h1>
-
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-lg font-normal">
-                        현재 고객님께 더 안전하고 편리한 환경을 제공해 드리기 위해 웹사이트 고도화 작업을 진행하고 있습니다. 빠른 시일 내에 오픈하도록 하겠습니다.
-                    </p>
-                </div>
-
-                <!-- Progress Bar Section -->
-                <div class="pt-6 border-t border-slate-200/60">
-                    <div class="flex justify-between items-center text-xs font-bold mb-2">
-                        <span class="text-slate-500 uppercase font-en tracking-wider">Renewal Progress</span>
-                        <span class="text-indigo-600 font-extrabold font-en text-sm">88%</span>
-                    </div>
-                    <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200/50">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full w-[88%] transition-all duration-1000 shadow-sm"></div>
-                    </div>
-                </div>
+    <main>
+        <!-- Hero Section (Light Mode) -->
+        <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden bg-white">
+            <!-- Light Mode Background Image Filter -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="/img/made.png" alt="소문난서류제작 메인 배경" class="w-full h-full object-cover opacity-10 scale-105 filter blur-[2px]">
+                <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/95 to-slate-50"></div>
             </div>
 
-            <!-- KakaoTalk Contact Card (Col 12 or Col 5) -->
-            <div class="md:col-span-5 bg-gradient-to-br from-kakao via-[#FDE000] to-amber-300 rounded-3xl p-8 shadow-xl shadow-amber-500/10 flex flex-col justify-between relative overflow-hidden group border border-yellow-300">
-                
-                <!-- Background Icon Pattern -->
-                <div class="absolute -right-6 -bottom-6 text-black/5 text-9xl font-black select-none pointer-events-none group-hover:scale-110 transition-transform duration-500">
-                    <i class="fa-solid fa-comment"></i>
+            <!-- Light Ambient Glow -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-400/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white border border-amber-200 text-amber-600 text-xs sm:text-sm font-bold mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+                    <span>완벽한 디테일의 비식별 맞춤 서류 솔루션</span>
                 </div>
 
-                <div>
-                    <!-- Header inside Kakao Card -->
-                    <div class="flex items-center justify-between mb-8">
-                        <div class="w-12 h-12 bg-kakaoDark rounded-2xl flex items-center justify-center text-kakao text-2xl shadow-md">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight leading-tight mb-8 font-display">
+                    소문난서류제작 <br class="hidden sm:block">
+                    <span class="text-amber-500">맞춤 서비스 가이드</span>
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-xl leading-relaxed max-w-3xl mx-auto font-medium mb-12">
+                    졸업증명서, 성적증명서, 대학교학위증, 재학증명서 등 원하시는 양식을 정교하게 구현합니다.<br class="hidden sm:block">
+                    100% 비식별 및 무효 표기 원칙으로 안전하게 상담을 시작하세요.
+                </p>
+
+                <!-- Keywords Pill Cloud (SEO) -->
+                <div class="flex flex-wrap items-center justify-center gap-2.5 mb-14 max-w-4xl mx-auto">
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#졸업증명서</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#성적증명서</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#재학증명서</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#대학교학위증</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#졸업장</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#학력증명서</span>
+                    <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#학위증명서</span>
+                </div>
+
+                <!-- Callout Card -->
+                <div class="max-w-lg mx-auto bg-white border border-amber-200 p-4 sm:p-5 rounded-3xl shadow-xl shadow-amber-500/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3 text-left">
+                        <div class="w-12 h-12 rounded-2xl bg-kakao text-kakaoDark flex items-center justify-center text-2xl font-bold shadow-md">
                             <i class="fa-solid fa-comment"></i>
                         </div>
-                        <span class="px-3 py-1 bg-black/10 backdrop-blur-sm rounded-full text-[11px] font-bold text-kakaoDark uppercase tracking-wider">
-                            실시간 문의
-                        </span>
-                    </div>
-
-                    <h2 class="text-xs font-bold text-slate-800/80 uppercase tracking-widest font-en mb-1">KakaoTalk Contact</h2>
-                    <p class="text-2xl font-extrabold text-kakaoDark tracking-tight mb-6">
-                        궁금하신 점이 있으신가요?
-                    </p>
-
-                    <!-- ID Display Box -->
-                    <div class="bg-slate-900/90 text-white rounded-2xl p-4 shadow-lg backdrop-blur-md border border-slate-800 mb-6">
-                        <div class="text-[11px] text-slate-400 font-medium mb-1">카카오톡 아이디</div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-2xl font-black text-kakao tracking-wider font-en" id="kakaoId">v444</span>
-                            <span class="text-xs text-slate-400 bg-slate-800 px-2 py-1 rounded-lg">1:1 상담</span>
+                        <div>
+                            <span class="text-xs text-slate-500 font-bold block">실시간 빠른 1:1 상담 예약</span>
+                            <span class="text-base font-bold text-slate-600">카톡 ID : <strong class="text-slate-900 text-lg font-black">v444</strong></span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Copy Action Button -->
-                <div>
-                    <button id="copyBtn" onclick="copyKakaoId()" class="w-full py-4 px-6 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-2xl transition-all duration-200 flex items-center justify-center gap-2.5 shadow-lg active:scale-[0.98]">
-                        <i class="fa-regular fa-copy text-kakao" id="copyIcon"></i>
-                        <span id="copyBtnText">카카오톡 아이디 복사하기</span>
+                    <button onclick="copyKakaoId()" class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm rounded-2xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fa-regular fa-copy text-base"></i>
+                        <span>복사하기</span>
                     </button>
                 </div>
-
             </div>
+        </section>
 
-            <!-- Sub Card 1: Key Improvements -->
-            <div class="md:col-span-8 glass-card rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en mb-4">Renewal Highlights</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    
-                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
-                        <div class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-bold">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <span class="font-bold text-sm text-slate-800">속도 최적화</span>
-                        <span class="text-xs text-slate-500">기존 대비 2배 빠른 로딩 속도 제공</span>
-                    </div>
+        <!-- Services Section (Light Mode Bento Grid) -->
+        <section id="services" class="py-24 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-3">Service Category</h2>
+                    <h3 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">전체 카테고리 한눈에 보기</h3>
+                    <p class="text-slate-500 text-sm mt-3 font-medium">원하시는 항목 카드를 클릭하시면 상담 신청 안내로 연결됩니다.</p>
+                </div>
 
-                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
-                        <div class="w-8 h-8 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-sm font-bold">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                        </div>
-                        <span class="font-bold text-sm text-slate-800">모바일 UX 개선</span>
-                        <span class="text-xs text-slate-500">모바일 기기에 더욱 친화적인 화면</span>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                    <script>
+                        const categoryList = [
+                            { title: '졸업증명서·졸업장 제작', desc: '캘리그래피 톤과 문구 균형을 기품 있게 재현.', icon: 'fa-user-graduate', highlight: true },
+                            { title: '성적증명서 제작', desc: '학교/기관별 점수표 구조 및 레이아웃 반영.', icon: 'fa-graduation-cap', highlight: true },
+                            { title: '대학교학위증·학위증명서', desc: '고유 문양, 직인, 서명 배치를 정교하게 연출.', icon: 'fa-certificate', highlight: true },
+                            { title: '재학증명서·학력증명서', desc: '현재 재학 및 학력 증빙용 맞춤 양식 설계.', icon: 'fa-school', highlight: true },
+                            { title: '신분증·주민등록증·민증', desc: '서체, 자간, 고유 레이아웃 정교 구현.', icon: 'fa-id-card' },
+                            { title: '면허증 제작', desc: '운전 및 특수 면허 세부 디테일 완벽 구성.', icon: 'fa-car' },
+                            { title: '진단서 제작', desc: '의료 문서 표준 서식 및 소견 항목 세팅.', icon: 'fa-file-medical' },
+                            { title: '여권 제작', desc: '다국적 스타일 서식 및 커버 디테일 재현.', icon: 'fa-passport' },
+                            { title: '통장 제작', desc: '커버, 내지, 계좌 인쇄 면의 현실적 레이아웃.', icon: 'fa-book' },
+                            { title: '거래내역서 제작', desc: '기간별, 금액별 거래 구조를 목적에 맞게 세팅.', icon: 'fa-file-invoice-dollar' },
+                            { title: '가족관계 증명서 제작', desc: '비식별화를 통한 안전한 항목 배치.', icon: 'fa-users' },
+                            { title: '등본ㅣ초본 제작', desc: '표 간격, 폰트 굵기 밸런스 균형 조정.', icon: 'fa-file-lines' },
+                            { title: '통장내역 제작', desc: '입출금 잔액 흐름 및 세부 내역 설계.', icon: 'fa-list-ul' },
+                            { title: '아포스티유 제작', desc: '국제 문서 양식 및 인증 도안 레이아웃.', icon: 'fa-globe' },
+                            { title: '토익성적표 제작', desc: '영역별 스코어 및 섹션 구분 정밀 구성.', icon: 'fa-language' },
+                            { title: '국가기술자격증 제작', desc: '자격 종목 및 일련번호 구조 맞춤 적용.', icon: 'fa-award' },
+                            { title: '의사면허증 제작', desc: '의료 기관 상징 도안 및 문구 톤 반영.', icon: 'fa-user-doctor' },
+                            { title: '사업자등록증명 제작', desc: '업태, 종목 등 필수 기재 사항 정교 표현.', icon: 'fa-building' },
+                            { title: '기타 맞춤 제작', desc: '목록에 없는 기타 서류도 1:1 맞춤 제작.', icon: 'fa-circle-question' }
+                        ];
 
-                    <div class="bg-white/60 p-4 rounded-2xl border border-slate-100 flex flex-col gap-2">
-                        <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm font-bold">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <span class="font-bold text-sm text-slate-800">보안성 강화</span>
-                        <span class="text-xs text-slate-500">안전한 데이터 보호 및 암호화</span>
-                    </div>
-
+                        document.write(categoryList.map(c => `
+                            <div class="bento-card rounded-2xl p-6 group flex flex-col justify-between h-full relative overflow-hidden ${c.highlight ? 'ring-1 ring-amber-400 bg-amber-50/30' : ''}">
+                                ${c.highlight ? '<span class="absolute top-3 right-3 text-[10px] font-bold bg-amber-100 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-full">인기 추천</span>' : ''}
+                                <div>
+                                    <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-500 text-xl mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all shadow-sm">
+                                        <i class="fa-solid ${c.icon}"></i>
+                                    </div>
+                                    <h4 class="text-base font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">${c.title}</h4>
+                                    <p class="text-xs text-slate-500 leading-relaxed font-medium">${c.desc}</p>
+                                </div>
+                            </div>
+                        `).join(''));
+                    </script>
                 </div>
             </div>
+        </section>
 
-            <!-- Sub Card 2: Contact Info Pill -->
-            <div class="md:col-span-4 glass-card rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest font-en mb-2">Customer Care</h3>
-                    <div class="text-lg font-bold text-slate-800 mb-2">빠르고 친절한 상담 서비스</div>
-                    <p class="text-xs text-slate-500 leading-relaxed mb-4">
-                        공사 중이라도 문의사항이 있으시면 언제든 카카오톡 아이디 <b>v444</b> 등록 후 메세지를 남겨주세요.
-                    </p>
+        <!-- Scope Section (Light Mode) -->
+        <section id="scope" class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-14 border border-slate-200 shadow-sm">
+                    <div class="text-center max-w-2xl mx-auto mb-14">
+                        <h2 class="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-2">Scope & Quality</h2>
+                        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">맞춤 서류 제작 가능범위</h3>
+                        <p class="text-slate-500 text-sm mt-3 font-medium">고객님의 필요 목적에 맞춰 항목, 서식, 다국어 포맷을 섬세하게 조율합니다.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-500 text-xl"><i class="fa-solid fa-earth-asia"></i></div>
+                            <h4 class="text-lg font-bold text-slate-900">서식 / 언어 / 국가</h4>
+                            <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>국내 및 해외 양식 톤 & 다국어(영/중/일 등) 지원</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>관공서, 의료, 학사, 금융 등 다양한 서식 재현</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>서체 두께, 자간, 미세 라인 밸런스 정교 보정</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-500 text-xl"><i class="fa-solid fa-fingerprint"></i></div>
+                            <h4 class="text-lg font-bold text-slate-900">질감 및 인장 요소</h4>
+                            <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>용지 재질감, 미세 광택, 패턴 시뮬레이션</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>무효(VOID) 및 비식별 워터마크 기본 적용</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>민감 정보 비식별 가공으로 안전성 확보</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-500 text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4 class="text-lg font-bold text-slate-900">보안 및 데이터 관리</h4>
+                            <ul class="space-y-2.5 text-xs text-slate-600 font-medium">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>제작 직후 모든 상담 및 원본 데이터 영구 파기</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>서버 내 민감정보 보관 절대 불가 철칙</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> <span>철저한 1:1 비밀 보장 상담 시스템</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promise Section (Light Mode) -->
+        <section id="promise" class="py-20 bg-white border-t border-slate-200 text-center relative">
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <div class="w-16 h-16 rounded-3xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-500 text-2xl mx-auto mb-6 shadow-sm">
+                    <i class="fa-solid fa-handshake-simple"></i>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mb-4 font-display">소문난서류제작의 약속</h3>
+                <p class="text-sm sm:text-base text-slate-600 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
+                    우리는 독보적인 기술력으로 완벽한 품질을 완성합니다.<br>
+                    모든 과정은 보안을 최우선으로 하며, 책임감 있는 제작을 약속드립니다.<br>
+                    정확한 디테일과 신속한 대응으로 결과물을 증명하겠습니다.
+                </p>
+
+                <!-- Dedicated Copy Box (Light Mode) -->
+                <div class="inline-flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 border border-slate-200 p-3 sm:p-4 sm:pl-6 rounded-2xl shadow-md max-w-md w-full mx-auto">
+                    <div class="flex items-center gap-3 text-left">
+                        <i class="fa-solid fa-comment text-amber-500 text-xl"></i>
+                        <div>
+                            <span class="text-[11px] text-slate-500 font-bold block">소문난서류제작 카톡 문의</span>
+                            <span class="text-sm font-bold text-slate-600">ID : <strong class="text-slate-900 font-black">v444</strong></span>
+                        </div>
+                    </div>
+                    <button onclick="copyKakaoId()" class="w-full sm:w-auto px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-regular fa-copy"></i> 복사하기
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Light Mode) -->
+        <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-2">FAQ</h2>
+                    <h3 class="text-2xl sm:text-3xl font-black text-slate-900 font-display">자주 묻는 질문</h3>
+                </div>
+
+                <div class="space-y-4" id="faqAccordion">
+                    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-200 hover:border-amber-300">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center gap-4 text-sm sm:text-base">
+                            <span>실제 행정기관이나 제출용으로 사용할 수 있나요?</span>
+                            <i class="fa-solid fa-chevron-down text-amber-500 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed font-medium bg-slate-50">
+                            아니요, 절대 불가합니다. 소문난서류제작의 모든 결과물은 비식별 가공된 맞춤 목적의 참고 서류입니다. 법적 효력이 없으며 공·사문서 행정 제출용으로 절대 사용할 수 없습니다.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-200 hover:border-amber-300">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center gap-4 text-sm sm:text-base">
+                            <span>제작 상담 시 개인정보는 안전하게 보호되나요?</span>
+                            <i class="fa-solid fa-chevron-down text-amber-500 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed font-medium bg-slate-50">
+                            네, 철저히 보호됩니다. 제작 완료 및 납품 즉시 모든 시안 파일과 제공해 주신 정보는 서버에서 영구 삭제되며 절대 보관하지 않습니다.
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden transition-all duration-200 hover:border-amber-300">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center gap-4 text-sm sm:text-base">
+                            <span>오용 방지 장치는 무엇이 있나요?</span>
+                            <i class="fa-solid fa-chevron-down text-amber-500 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed font-medium bg-slate-50">
+                            실제 공식 서류와 혼동될 가능성을 차단하기 위해 무효(VOID) 또는 샘플 표시를 유지하며, 민감 정보는 가공된 텍스트로 비식별화하여 제작하는 것을 철칙으로 합니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Minimalist White Footer -->
+        <footer class="bg-white text-slate-500 text-xs py-16 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+                
+                <!-- Brand Identity -->
+                <div class="font-bold text-base text-slate-800 flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-black text-sm shadow-md shadow-amber-500/20">소</div>
+                    <span class="tracking-tight">소문난서류제작</span>
                 </div>
                 
-                <div class="flex items-center gap-3 pt-3 border-t border-slate-200/60 text-xs text-slate-600">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>평균 응답 시간 : <b>10분 이내</b></span>
+                <!-- Legal & Safety Notice Box -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 mb-8 max-w-3xl text-center leading-relaxed text-[11px] text-slate-500">
+                    <strong class="text-slate-700">법적 고지 및 안내:</strong> 본 웹사이트에서 제공하는 모든 서비스 및 결과물은 비식별 처리된 가공물입니다. 실제 행정, 입학, 취업, 금융 업무 등에 제출하는 서류의 위조, 변조, 대행은 일절 진행하지 않으며 관련 문의도 단호히 거절합니다. 법적 효력이 전혀 없는 서류 제작만을 원칙으로 합니다.
+                </div>
+                
+                <!-- Copyright & Location -->
+                <div class="text-center text-[11px] text-slate-400 space-y-1.5 font-medium">
+                    <p>서울특별시 마포구 연남동</p>
+                    <p>2016.08.25 - 2050.01.23 &copy; 소문난서류제작. All rights reserved.</p>
                 </div>
             </div>
-
-        </div>
-
-        <!-- Floating Toast Alert Notification -->
-        <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 opacity-0 translate-y-4 transition-all duration-300 pointer-events-none z-50 bg-slate-900 text-white text-xs font-semibold px-6 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-800">
-            <div class="w-6 h-6 rounded-full bg-kakao text-kakaoDark flex items-center justify-center text-xs">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <span>카카오톡 아이디 <strong class="text-kakao font-bold">v444</strong>가 클립보드에 복사되었습니다.</span>
-        </div>
-
+        </footer>
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full max-w-5xl mx-auto px-6 py-8 text-center text-xs text-slate-400 relative z-10">
-        <p>© <span id="currentYear"></span> All rights reserved. 이용에 불편을 드려 죄송합니다.</p>
-    </footer>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-24 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white font-bold px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-amber-500 text-lg"></i>
+        <span class="text-sm text-slate-100">카카오톡 아이디(<strong class="text-amber-400">v444</strong>)가 클립보드에 복사되었습니다!</span>
+    </div>
 
-    <!-- Logic Script -->
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="맨 위로 이동" class="fixed bottom-6 right-6 z-40 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 bg-white hover:bg-amber-500 text-slate-600 hover:text-white border border-slate-200 hover:border-amber-500 w-12 h-12 rounded-full shadow-lg shadow-amber-500/10 flex items-center justify-center focus:outline-none active:scale-95 group">
+        <i class="fa-solid fa-arrow-up text-lg group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+
+    <!-- JavaScript Interactions -->
     <script>
-        // Set dynamic current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Copy KakaoTalk ID logic
+        // Kakao ID Copy Logic
         function copyKakaoId() {
-            const kakaoId = "v444";
-            
-            const copyBtnText = document.getElementById('copyBtnText');
-            const copyIcon = document.getElementById('copyIcon');
-            const toast = document.getElementById('toast');
-
-            // Fallback & Modern Clipboard API Execution
-            function showSuccess() {
-                // Button UI State
-                copyBtnText.textContent = "복사되었습니다!";
-                copyIcon.className = "fa-solid fa-check text-emerald-400";
-
-                // Toast Feedback State
-                toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-                toast.classList.add('opacity-100', 'translate-y-0');
-
-                // Reset after delay
-                setTimeout(() => {
-                    copyBtnText.textContent = "카카오톡 아이디 복사하기";
-                    copyIcon.className = "fa-regular fa-copy text-kakao";
-                    toast.classList.remove('opacity-100', 'translate-y-0');
-                    toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-                }, 2500);
-            }
-
+            const kakaoId = 'v444';
             if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(kakaoId).then(showSuccess).catch(() => {
-                    fallbackCopy(kakaoId);
-                });
+                navigator.clipboard.writeText(kakaoId).then(showToast).catch(() => legacyCopy(kakaoId));
             } else {
-                fallbackCopy(kakaoId);
-            }
-
-            function fallbackCopy(text) {
-                const textArea = document.createElement("textarea");
-                textArea.value = text;
-                textArea.style.position = "fixed";
-                textArea.style.left = "-999999px";
-                document.body.appendChild(textArea);
-                textArea.focus();
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    showSuccess();
-                } catch (err) {
-                    console.error('Copy failed', err);
-                }
-                document.body.removeChild(textArea);
+                legacyCopy(kakaoId);
             }
         }
+
+        function legacyCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Copy Error', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isHidden = menu.classList.contains('hidden');
+            
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isOpen = !content.classList.contains('hidden');
+            const parent = button.parentElement;
+            
+            // Close all
+            document.querySelectorAll('#faqAccordion > div').forEach(item => {
+                item.querySelector('div').classList.add('hidden');
+                item.querySelector('i').classList.remove('rotate-180');
+                item.classList.remove('border-amber-300');
+            });
+
+            // Open clicked
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+                parent.classList.add('border-amber-300');
+            }
+        }
+
+        // Scroll to Top Button Visibility Toggle
+        window.addEventListener('scroll', function() {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                scrollTopBtn.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+            } else {
+                scrollTopBtn.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                scrollTopBtn.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }
+        });
     </script>
 </body>
 </html>
