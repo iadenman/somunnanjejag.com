@@ -129,19 +129,6 @@
       ]
     }
     </script>
-    <script type="text/javascript">
-        tocplusTop=200;
-        tocplusLeft=5;
-        tocplusMinimizedImage='http://kr07.tocplus007.com/img/minimized_ko.gif';
-        tocplusHAlign='right';
-        tocplusWidth=180;
-        tocplusHeight=220;
-        tocplusUserName='손님';
-        tocplusFrameColor='#458fff';
-        tocplusFloatingWindow=true;
-        var tocplusHost = (("https:" == document.location.protocol) ? "https://" : "http://");
-        document.write(unescape("%"+"3Cscript src='" + tocplusHost + "kr07.tocplus007.com/chatLoader.do?userId=acemall' type='text/javascript'"+"%"+"3E"+"%"+"3C/script"+"%"+"3E"));
-    </script>
 </head>
 <body class="text-slate-700 antialiased selection:bg-amber-500 selection:text-white">
 
@@ -167,17 +154,11 @@
                 <a href="#faq" class="hover:text-amber-600 transition-colors">FAQ</a>
             </nav>
 
-            <!-- Kakao ID Action Box (Separated ID and Copy Button) -->
+            <!-- Customer Center / Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <div class="hidden sm:flex items-center bg-white border border-slate-200 p-1 pl-3.5 rounded-full shadow-sm hover:border-amber-300 transition-all group">
-                    <div class="flex items-center gap-2 mr-3">
-                        <i class="fa-solid fa-comment text-amber-500 text-sm"></i>
-                        <span class="text-xs text-slate-500 font-medium">카톡 문의: <strong class="text-slate-900 font-bold">M222</strong></span>
-                    </div>
-                    <button onclick="copyKakaoId()" class="bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-3.5 py-1.5 rounded-full transition-colors flex items-center gap-1.5 active:scale-95">
-                        <i class="fa-regular fa-copy text-[11px]"></i> 복사하기
-                    </button>
-                </div>
+                <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="hidden sm:flex bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors items-center gap-1.5 active:scale-95 shadow-sm">
+                    <i class="fa-solid fa-headset text-[12px]"></i> 고객센터 바로가기
+                </a>
                 <button id="mobileMenuBtn" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMobileMenu()" class="md:hidden text-slate-600 hover:text-slate-900 p-2 focus:outline-none">
                     <i class="fa-solid fa-bars-staggered text-2xl"></i>
                 </button>
@@ -191,15 +172,9 @@
             <a href="#promise" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">소문난의 약속</a>
             <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">FAQ</a>
             <div class="pt-6 border-t border-slate-100 mt-2">
-                <div class="w-full p-2 pl-4 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-comment text-amber-500 text-lg"></i>
-                        <span class="text-sm font-semibold text-slate-600">ID : <strong class="text-slate-900 font-bold">M222</strong></span>
-                    </div>
-                    <button onclick="copyKakaoId()" class="bg-amber-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 active:scale-95 transition-transform">
-                        <i class="fa-regular fa-copy"></i> 복사하기
-                    </button>
-                </div>
+                <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold px-4 py-3 rounded-xl flex justify-center items-center gap-2 active:scale-95 transition-transform">
+                    <i class="fa-solid fa-headset"></i> 고객센터 이동하기
+                </a>
             </div>
         </div>
     </header>
@@ -209,7 +184,7 @@
         <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden bg-white">
             <!-- Light Mode Background Image Filter -->
             <div class="absolute inset-0 z-0 overflow-hidden">
-                <img src="/img/made.png" alt="소문난서류제작 메인 배경" class="w-full h-full object-cover opacity-10 scale-105 filter blur-[2px]">
+                <img src="/img/made.png" alt="소문난서류제작 메인 배경" class="w-full h-full object-cover opacity-10 scale-105 filter blur-[2px]" onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop';">
                 <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-white/95 to-slate-50"></div>
             </div>
 
@@ -243,21 +218,21 @@
                     <span class="px-4 py-2 bg-white border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 shadow-sm">#학위증명서</span>
                 </div>
 
-                <!-- Callout Card -->
+                <!-- Callout Card (Changed to Customer Center Link) -->
                 <div class="max-w-lg mx-auto bg-white border border-amber-200 p-4 sm:p-5 rounded-3xl shadow-xl shadow-amber-500/5 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="flex items-center gap-3 text-left">
-                        <div class="w-12 h-12 rounded-2xl bg-kakao text-kakaoDark flex items-center justify-center text-2xl font-bold shadow-md">
-                            <i class="fa-solid fa-comment"></i>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold shadow-md">
+                            <i class="fa-solid fa-headset"></i>
                         </div>
                         <div>
-                            <span class="text-xs text-slate-500 font-bold block">실시간 빠른 1:1 상담 예약</span>
-                            <span class="text-base font-bold text-slate-600">카톡 ID : <strong class="text-slate-900 text-lg font-black">M222</strong></span>
+                            <span class="text-xs text-slate-500 font-bold block">빠르고 정확한 피드백</span>
+                            <span class="text-base font-bold text-slate-800">실시간 1:1 상담 예약</span>
                         </div>
                     </div>
-                    <button onclick="copyKakaoId()" class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm rounded-2xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-2 whitespace-nowrap">
-                        <i class="fa-regular fa-copy text-base"></i>
-                        <span>복사하기</span>
-                    </button>
+                    <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm rounded-2xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-base"></i>
+                        <span>문의하기</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -268,7 +243,7 @@
                 <div class="text-center max-w-2xl mx-auto mb-16">
                     <h2 class="text-xs font-extrabold uppercase tracking-widest text-amber-500 mb-3">Service Category</h2>
                     <h3 class="text-3xl sm:text-4xl font-black text-slate-900 font-display">전체 카테고리 한눈에 보기</h3>
-                    <p class="text-slate-500 text-sm mt-3 font-medium">원하시는 항목 카드를 클릭하시면 상담 신청 안내로 연결됩니다.</p>
+                    <p class="text-slate-500 text-sm mt-3 font-medium">원하시는 서비스를 확인하시고 고객센터로 문의해 주세요.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -370,18 +345,19 @@
                     정확한 디테일과 신속한 대응으로 결과물을 증명하겠습니다.
                 </p>
 
-                <!-- Dedicated Copy Box (Light Mode) -->
-                <div class="inline-flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 border border-slate-200 p-3 sm:p-4 sm:pl-6 rounded-2xl shadow-md max-w-md w-full mx-auto">
+                <!-- Dedicated Contact Box (Replaced Kakao with Customer Center) -->
+                <div class="inline-flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 border border-slate-200 p-4 sm:p-5 rounded-2xl shadow-md max-w-md w-full mx-auto">
                     <div class="flex items-center gap-3 text-left">
-                        <i class="fa-solid fa-comment text-amber-500 text-xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-500 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
                         <div>
-                            <span class="text-[11px] text-slate-500 font-bold block">소문난서류제작 카톡 문의</span>
-                            <span class="text-sm font-bold text-slate-600">ID : <strong class="text-slate-900 font-black">M222</strong></span>
+                            <span class="text-sm font-bold text-slate-800 block">제작 문의가 필요하신가요?</span>
                         </div>
                     </div>
-                    <button onclick="copyKakaoId()" class="w-full sm:w-auto px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-xs rounded-xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-1.5 whitespace-nowrap">
-                        <i class="fa-regular fa-copy"></i> 복사하기
-                    </button>
+                    <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="w-full sm:w-auto px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-black text-sm rounded-xl shadow-md shadow-amber-500/20 transition-transform active:scale-95 flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> 문의하기
+                    </a>
                 </div>
             </div>
         </section>
@@ -446,17 +422,11 @@
                 <!-- Copyright & Location -->
                 <div class="text-center text-[11px] text-slate-400 space-y-1.5 font-medium">
                     <p>서울특별시 마포구 연남동</p>
-                    <p>2016.08.25 - 2050.01.23 &copy; 소문난서류제작. All rights reserved.</p>
+                    <p>2016.08.25 - 2026 &copy; 소문난서류제작. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     </main>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-24 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white font-bold px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 pointer-events-none">
-        <i class="fa-solid fa-circle-check text-amber-500 text-lg"></i>
-        <span class="text-sm text-slate-100">카카오톡 아이디(<strong class="text-amber-400">M222</strong>)가 클립보드에 복사되었습니다!</span>
-    </div>
 
     <!-- Scroll To Top Button -->
     <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="맨 위로 이동" class="fixed bottom-6 right-6 z-40 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 bg-white hover:bg-amber-500 text-slate-600 hover:text-white border border-slate-200 hover:border-amber-500 w-12 h-12 rounded-full shadow-lg shadow-amber-500/10 flex items-center justify-center focus:outline-none active:scale-95 group">
@@ -465,43 +435,6 @@
 
     <!-- JavaScript Interactions -->
     <script>
-        // Kakao ID Copy Logic
-        function copyKakaoId() {
-            const kakaoId = 'M222';
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(kakaoId).then(showToast).catch(() => legacyCopy(kakaoId));
-            } else {
-                legacyCopy(kakaoId);
-            }
-        }
-
-        function legacyCopy(text) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.position = "fixed";
-            textArea.style.left = "-9999px";
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showToast();
-            } catch (err) {
-                console.error('Copy Error', err);
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function showToast() {
-            const toast = document.getElementById('toast');
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3000);
-        }
-
         // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
