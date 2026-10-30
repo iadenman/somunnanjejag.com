@@ -150,33 +150,19 @@
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="#services" class="hover:text-amber-600 transition-colors">전체 서비스</a>
                 <a href="#scope" class="hover:text-amber-600 transition-colors">제작 범위</a>
-                <a href="#promise" class="hover:text-amber-600 transition-colors">소문난의 약속</a>
                 <a href="#faq" class="hover:text-amber-600 transition-colors">FAQ</a>
             </nav>
 
             <!-- Customer Center / Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="hidden sm:flex bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors items-center gap-1.5 active:scale-95 shadow-sm">
+                <a href="#promise" class="hidden sm:flex bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors items-center gap-1.5 active:scale-95 shadow-sm">
                     <i class="fa-solid fa-headset text-[12px]"></i> 고객센터 바로가기
                 </a>
-                <button id="mobileMenuBtn" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMobileMenu()" class="md:hidden text-slate-600 hover:text-slate-900 p-2 focus:outline-none">
-                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
-                </button>
+              
             </div>
         </div>
 
-        <!-- Mobile Drawer Menu (Light) -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white/98 border-b border-slate-200 px-6 py-6 space-y-4 shadow-2xl absolute w-full left-0 top-20 backdrop-blur-2xl">
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">전체 서비스</a>
-            <a href="#scope" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">제작 범위</a>
-            <a href="#promise" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">소문난의 약속</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 hover:text-amber-600 font-bold py-2 text-lg">FAQ</a>
-            <div class="pt-6 border-t border-slate-100 mt-2">
-                <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold px-4 py-3 rounded-xl flex justify-center items-center gap-2 active:scale-95 transition-transform">
-                    <i class="fa-solid fa-headset"></i> 고객센터 이동하기
-                </a>
-            </div>
-        </div>
+       
     </header>
 
     <main>
@@ -435,20 +421,7 @@
 
     <!-- JavaScript Interactions -->
     <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            const btn = document.getElementById('mobileMenuBtn');
-            const isHidden = menu.classList.contains('hidden');
-            
-            if (isHidden) {
-                menu.classList.remove('hidden');
-                btn.setAttribute('aria-expanded', 'true');
-            } else {
-                menu.classList.add('hidden');
-                btn.setAttribute('aria-expanded', 'false');
-            }
-        }
+       
 
         // Accordion Toggle
         function toggleFaq(button) {
